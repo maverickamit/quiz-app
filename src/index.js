@@ -42,8 +42,10 @@ function buildQuiz() {
     }
     // add this question and it's answers to the output
     output.push(
-      `<div class="questions">${currentQuestion.question}</div>
-  <div class="answers">${answers.join("")}</div>
+      `<div class="slide>
+        <div class="questions">${currentQuestion.question}</div>
+    <div class="answers">${answers.join("")}</div>
+      </div>
   `
     );
   });
