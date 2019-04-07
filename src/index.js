@@ -42,7 +42,7 @@ function buildQuiz() {
     }
     // add this question and it's answers to the output
     output.push(
-      `<div class="slide>
+      `<div class="slide">
         <div class="questions">${currentQuestion.question}</div>
     <div class="answers">${answers.join("")}</div>
       </div>
@@ -87,3 +87,38 @@ function showResults() {
 buildQuiz();
 //On submit, shows Results
 submitButton.addEventListener("click", showResults);
+
+//Pagination. One question per page.
+let previousButton = document.getElementById("previous");
+let nextButton = document.getElementById("next");
+let slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(n) {
+  slides[currentSlide].classList.remove("active-slide");
+  slides[n].classList.add("active-slide");
+  currentSlide = n;
+  if (currentSlide === 0) {
+    previousButton.style.display = "none";
+  } else {
+    previousButton.style.display = "inline-block";
+  }
+  if (currentSlide === slides.length - 1) {
+    nextButton.style.display = "none";
+    submitButton.style.display = "inline-block";
+  } else {
+    nextButton.style.display = "inline-block";
+    submitButton.style.display = "none";
+  }
+}
+showSlide(0);
+
+function showNextSlide() {
+  showSlide(currentSlide + 1);
+}
+function showPrevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+previousButton.addEventListener("click", showPrevSlide);
+nextButton.addEventListener("click", showNextSlide);
