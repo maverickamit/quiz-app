@@ -121,7 +121,7 @@ let myQuestions = [
       b: "Structuralism",
       c: "Enlightenment"
     },
-    correctAnswer: "a"
+    correctAnswer: "b"
   },
   {
     question: " Jacques Derrida is known as the proponent of ",
