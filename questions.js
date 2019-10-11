@@ -29,7 +29,7 @@ let myQuestions = [
   },
   {
     question:
-      " what are the two classes of objects according to Kant's two-objects interpretation ?",
+      " What are the two classes of objects according to Kant's two-objects interpretation ?",
     answers: {
       a: "a world of appearances and another world of things in themselves",
       b: "a world of appearances and another world of logic",
