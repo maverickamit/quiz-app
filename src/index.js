@@ -1,87 +1,8 @@
 import "./styles.css";
-
+import myQuestions from "/questions.js";
 let quizContainer = document.getElementById("quiz");
 let resultsContainer = document.getElementById("results");
 let submitButton = document.getElementById("submit");
-let myQuestions = [
-  {
-    question: " Stoicism is an ancient Greek philosophy developed by?",
-    answers: {
-      a: "Socrates",
-      b: "Epicurus",
-      c: "Zeno of Citium"
-    },
-    correctAnswer: "c"
-  },
-  {
-    question: "One of the major adherents of stoic included the Emperor?",
-    answers: {
-      a: "Julio Caesar",
-      b: "Marcus Aurelius",
-      c: "Nero"
-    },
-    correctAnswer: "b"
-  },
-  {
-    question:
-      " For Nietzsche, what is the importance of morality or moral judgment?",
-    answers: {
-      a: "Moral judgment should always be taken literally",
-      b:
-        "Moral judgment is the most important type of judgment, except for religious judgment.",
-      c: "There are no moral facts at all"
-    },
-    correctAnswer: "c"
-  },
-  {
-    question:
-      "Nietzsche tries to solve the problem of existence and overcome pessimism with which kind of Greek play?",
-    answers: {
-      a: "Tragedy",
-      b: "Satire",
-      c: "Comedy"
-    },
-    correctAnswer: "a"
-  },
-  {
-    question:
-      "Which philosopher is best known for his statement cogito ergo sum?",
-    answers: {
-      a: "Jean-Paul Sartre",
-      b: "Plato",
-      c: "Descartes"
-    },
-    correctAnswer: "c"
-  },
-  {
-    question: "Epistemology is the theory of?",
-    answers: {
-      a: "Knowledge",
-      b: "Metaphysics",
-      c: "Value"
-    },
-    correctAnswer: "a"
-  },
-  {
-    question:
-      'Which Existentialist is credited with claiming "Existence precedes Essence"?',
-    answers: {
-      a: "Soren Kierkegaard",
-      b: "Jean-Paul Sartre",
-      c: "Albert Camus"
-    },
-    correctAnswer: "b"
-  },
-  {
-    question: "What word did Marx label the Ruling Class with?",
-    answers: {
-      a: "Proletariat",
-      b: "Bourgeoisie",
-      c: "Monopolisers"
-    },
-    correctAnswer: "b"
-  }
-];
 
 function buildQuiz() {
   // to store html output
